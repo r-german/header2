@@ -990,7 +990,7 @@ header .header-container .header__brand-websites-btn .colored-figure .colored-fi
   box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.28);
 }
 .menu-overlay .menu-overlay__title-bg .container .title-bg__box div {
-  border: 1px solid #fa0000;
+  border: 1px solid #00D1C1;
   box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.28);
 }
 .menu-overlay .menu-overlay__title-bg .container .title-bg__box .box__rectangle, .menu-overlay .menu-overlay__title-bg .container .title-bg__box .box__square, .menu-overlay .menu-overlay__title-bg .container .title-bg__box .box__circle {
@@ -1012,7 +1012,7 @@ header .header-container .header__brand-websites-btn .colored-figure .colored-fi
 }
 .menu-overlay .menu-overlay__title-bg .container .title-bg__box .box__circle {
   border-radius: 50%;
-  background-color: #fa0000;
+  background-color: #00D1C1;
 }
 .menu-overlay .menu-overlay__title-bg .container .title-bg__box .box__title {
   height: 100%;
@@ -1027,7 +1027,7 @@ header .header-container .header__brand-websites-btn .colored-figure .colored-fi
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-shadow: -3px 3px 3px rgba(0, 0, 0, 0.2);
-  color: #fa0000;
+  color: #00D1C1;
 }
 .menu-overlay .menu-overlay__nav-bg {
   flex-grow: 1;
