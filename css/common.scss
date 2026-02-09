@@ -1,0 +1,183 @@
+* {
+    padding: 0; 
+    margin: 0; 
+    border: 0;
+}
+*, *::before, *::after {box-sizing: border-box;}
+
+@font-face {
+    font-family: "CenturyGothic-Regular";
+    src: url("../fonts/CenturyGothic-Regular.woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "CenturyGothic-Bold";
+    src: url("../fonts/CenturyGothic-Bold.woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "CenturyGothic-Bold-Italic";
+    src: url("../fonts/CenturyGothic-Bold-Italic.woff2");
+    font-display: swap;
+}
+
+.fs-100 {font-size: 14px;}
+.fs-200 {font-size: 18px;}
+.fs-300 {font-size: 24px;}
+.fs-400 {font-size: 36px;}
+.fs-500 {font-size: 40px;}
+.fs-600 {font-size: 48px;}
+
+$grey1: #EEF2F5;
+$grey2: #DAE2E8;
+$grey3: #C8D4DE;
+$blue1: #B0C2D0;
+$blue2: #336699;
+$blue3: #3C4765;
+$blue4: #829FB4;
+$blue5: #2C354E;
+$blue6: #5CB8FF;
+$red1: #9E0000;
+$red2: #E83832;
+$red3: #c00000;
+$red4: #fa0000;
+$white: #FFFFFF;
+$black: #000000;
+
+html, body {height: 100%;}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-family: "CenturyGothic-Regular";
+    font-size: 16px;
+    line-height: 1;
+    color: $blue3;
+    background-color: $grey1;
+    overscroll-behavior-y: none;
+}
+
+body._lock {
+    overflow: hidden;
+    touch-action: none; 
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {flex: 1 1 auto;}
+
+.container {
+    max-width: 1668px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 80px;
+}
+
+a {text-decoration: none;}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "CenturyGothic-Bold";
+    font-weight: normal;
+}
+
+picture {
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+ul {list-style: none;}
+
+input, textarea, button {font: inherit;}
+input, textarea {
+    display: block;
+    line-height: 140%;
+    -webkit-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    color: inherit;
+}
+input, textarea, button, a {-webkit-tap-highlight-color: transparent;}
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba($blue2, 0.7);
+}
+input:-webkit-autofill, input:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0px 1000px $white inset !important;
+    -webkit-text-fill-color: $blue3 !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+input:-webkit-autofill:focus {-webkit-box-shadow: 0 0 0px 1000px $white inset, 0 0 3px rgba($blue2, 0.7) !important;}
+textarea {resize: none;}
+button, a, div[tabindex] {
+    &:focus {outline: none;}
+    &:focus-visible {outline: 2px solid $blue2;}
+}
+button {cursor: pointer;}
+
+.blue-btn {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-shadow: -2px 2px 4px rgba($black, 0.5);
+    color: $white;
+    background-color: $blue3;
+    @media (hover: hover) and (pointer: fine) {
+        transition: background-color 0.3s;
+        &:hover {background-color: $blue2;}
+    }
+}
+.blue-btn:focus-visible {outline-offset: 2px;}
+
+.radius-small {border-radius: 8px;}
+.radius-large {border-radius: 32px;}
+
+.txt-shadow {text-shadow: -2px 2px 4px rgba($black, 0.25);}
+
+@media (max-width: 1688.9px) and (min-width: 360px) {
+    .fs-100 {font-size: calc(12px + (14 - 12) * ((100vw - 360px) / (1688 - 360)));}
+    .fs-200 {font-size: calc(14px + (18 - 14) * ((100vw - 360px) / (1688 - 360)));}
+    .fs-300 {font-size: calc(16px + (24 - 16) * ((100vw - 360px) / (1688 - 360)));}
+    .fs-400 {font-size: calc(18px + (36 - 18) * ((100vw - 360px) / (1688 - 360)));}
+    .fs-500 {font-size: calc(20px + (40 - 20) * ((100vw - 360px) / (1688 - 360)));}
+    .fs-600 {font-size: calc(24px + (48 - 24) * ((100vw - 360px) / (1688 - 360)));}
+    body {
+        --fs-body: calc(12px + (16 - 12) * ((100vw - 360px) / (1688 - 360)));
+        font-size: var(--fs-body);
+    }
+    :root {
+        --space-small: calc(8px + (40 - 8) * ((100vw - 360px) / (1688 - 360)));
+        --space-medium: calc(12px + (60 - 12) * ((100vw - 360px) / (1688 - 360)));
+        --space-large: calc(16px + (80 - 16) * ((100vw - 360px) / (1688 - 360)));
+    }
+    .container {padding: 0 var(--space-large);}
+    .radius-small {border-radius: calc(4px + (8 - 4) * ((100vw - 360px) / (1688 - 360)));}
+    .radius-large {border-radius: calc(16px + (32 - 16) * ((100vw - 360px) / (1688 - 360)));}
+}
+
+@media (max-width: 1024.9px) and (min-width: 481px) {
+    .txt-shadow {text-shadow: -1.8px 1.8px 3.6px rgba($black, 0.25);}
+}
+
+@media (max-width: 480.9px) {
+    .txt-shadow {text-shadow: -1.6px 1.6px 3.2px rgba($black, 0.25);}
+}
+
+@media (max-width: 359.9px) {
+    .fs-100, body {font-size: 12px;}
+    .fs-200 {font-size: 14px;}
+    .fs-300 {font-size: 16px;}
+    .fs-400 {font-size: 18px;}
+    .fs-500 {font-size: 20px;}
+    .fs-600 {font-size: 24px;}
+    .container {padding: 0 16px;}
+    .radius-small {border-radius: 4px;}
+    .radius-large {border-radius: 16px;}
+}
